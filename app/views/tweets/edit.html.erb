@@ -1,0 +1,10 @@
+<div class="contents">
+  <h2>編集する</h2>
+  <%= form_for (@tweet) ,:url => {:action => 'update'} do |f| %>
+  <%= image_tag 'Githubのキャラクター.png' %>
+    <%= f.text_area :text, placeholder: "text" %>
+  <div class="button-box">
+    <%= f.submit "送信"%>
+  </div>  
+  <% end %>
+</div>

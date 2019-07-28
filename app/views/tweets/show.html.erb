@@ -1,0 +1,40 @@
+<div class="contents">
+  <div class="message clearfix">
+    <%= image_tag 'Githubのキャラクター.png' %>
+        <% if user_signed_in? && current_user.id == @tweet.user_id %>
+          <li>
+            <%= link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get %>
+          </li>
+          <li>
+            <%= link_to '削除', "/tweets/#{@tweet.id}", method: :delete %>
+          </li>
+        <% end %>
+    <div class="message_box">
+    <p class="user_name"><%= @tweet.user.name %><span class="time"><%= @tweet.created_at %></span></p>
+      <p class="text">
+        <%= @tweet.text %>
+      </p>
+    </div>
+  </div>
+<!-- コメント入力フォーム -->
+  <div class="container">
+    <% if current_user %>
+      <%= form_tag("/tweets/#{@tweet.id}/comments", method: :post) do %>
+        <textarea cols="30" name="text" placeholder="コメントする" rows="2"></textarea>
+        <input type="submit" value="SENT">
+      <% end %>
+    <% end %>
+<!-- コメント一覧表示 -->
+    <div class="comments">   
+      <h4>＜コメント一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
