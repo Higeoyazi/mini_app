@@ -20,7 +20,7 @@
   <div class="container">
     <% if current_user %>
       <%= form_tag("/tweets/#{@tweet.id}/comments", method: :post ,id: "new_comment") do %>
-        <textarea cols="30" name="text" placeholder="コメントする" rows="2" class="textbox"></textarea>
+        <textarea cols="30" name="text" placeholder="コメントする(入力必須)" rows="2" class="textbox"></textarea>
         <input type="submit" value="SENT">
       <% end %>
     <% end %>
