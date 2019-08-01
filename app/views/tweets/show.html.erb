@@ -19,10 +19,13 @@
 <!-- コメント入力フォーム -->
   <div class="container">
     <% if current_user %>
-      <%= form_tag("/tweets/#{@tweet.id}/comments", method: :post ,id: "new_comment") do %>
-        <textarea cols="30" name="text" placeholder="コメントする(入力必須)" rows="2" class="textbox"></textarea>
-        <input type="submit" value="SENT">
+      
+      <%= form_for( [@tweet, @comment] ) do |f| %>
+      <% binding.pry %>
+        <%= f.text_area :text, placeholder: "text" %>
+        <%= f.submit "送信"%> 
       <% end %>
+ 
     <% end %>
 <!-- コメント一覧表示 -->
     <div class="comments">   
