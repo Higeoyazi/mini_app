@@ -25,6 +25,7 @@
 //       var html = buildHTML(comment);
 //       $('.comments').append(html)
 //       $('.textbox').val('')
+//       $('.btn').prop('disabled', false);
 //       })
 //     })
 //     .fail(function(){

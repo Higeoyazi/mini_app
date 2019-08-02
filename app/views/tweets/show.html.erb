@@ -20,8 +20,8 @@
   <div class="container">
     <% if current_user %>
       <%= form_for( [@tweet, @comment], id: "new_comment" ) do |f| %>
-        <%= f.text_area :text, placeholder: "text" %>
-        <%= f.submit "送信"%> 
+        <%= f.text_area :text, placeholder: "text", :class=>"textbox" %>
+        <%= f.submit "送信", :class=>"btn"%> 
       <% end %>
     <% end %>
 <!-- コメント一覧表示 -->

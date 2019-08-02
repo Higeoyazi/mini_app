@@ -4,6 +4,10 @@ class CommentsController < ApplicationController
     @tweet = Tweet.find(params[:tweet_id])
     @comment = @tweet.comments.create(text: comment_params[:text], tweet_id: comment_params[:tweet_id], user_id: current_user.id)
     redirect_to "/tweets/#{@comment.tweet.id}"
+    # respond_to do |format|
+    #   format.html { redirect_to tweet_path(params[:tweet_id])  }
+    #   format.json
+    # end
   end
 
   def edit
