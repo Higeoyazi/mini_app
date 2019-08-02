@@ -19,9 +19,9 @@
 <!-- コメント入力フォーム -->
   <div class="container">
     <% if current_user %>
-      <%= form_tag("/tweets/#{@tweet.id}/comments", method: :post ,id: "new_comment") do %>
-        <textarea cols="30" name="text" placeholder="コメントする(入力必須)" rows="2" class="textbox"></textarea>
-        <input type="submit" value="SENT">
+      <%= form_for( [@tweet, @comment], id: "new_comment" ) do |f| %>
+        <%= f.text_area :text, placeholder: "text" %>
+        <%= f.submit "送信"%> 
       <% end %>
     <% end %>
 <!-- コメント一覧表示 -->
@@ -33,6 +33,14 @@
             <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
             <%= comment.text %>
           </p>
+            <% if user_signed_in? && current_user.id == comment.user_id %> 
+            <li>
+              <%= link_to '編集', "/tweets/#{@tweet.id}/comments/#{comment.id}/edit", method: :get %>
+            </li>
+            <li>
+              <%= link_to '削除', "/tweets/#{@tweet.id}/comments/#{comment.id}", method: :delete %>
+            </li>
+            <% end %>
         <% end %>
       <% end %>
     </div>

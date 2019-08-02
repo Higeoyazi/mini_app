@@ -30,12 +30,13 @@ class TweetsController < ApplicationController
     tweet.update(tweet_params) if tweet.user_id == current_user.id
     redirect_to controller: :tweets, action: :index
   end
-
+  
   def show
     @tweet = Tweet.find(params[:id])
     @comments = @tweet.comments.includes(:user)
+    @comment = @tweet.comments.new
   end
-  
+
   private
   def tweet_params
     params.require(:tweet).permit(:text)
