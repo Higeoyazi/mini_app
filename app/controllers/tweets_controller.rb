@@ -35,7 +35,6 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find(params[:id])
     @comments = @tweet.comments.includes(:user)
     @comment = @tweet.comments.new
-    binding.pry
   end
 
   private
