@@ -6,12 +6,12 @@
 
     <div class="field">
       <%= f.label :name %> <em>(15 characters maximum)</em><br />
-      <%= f.text_field :name, autofocus: true %>
+      <%= f.text_field :name, autofocus: true, placeholder: 'ユーザー名を入力(必須)' %>
     </div>
 
     <div class="field">
       <%= f.label :email %><br />
-      <%= f.email_field :email %>
+      <%= f.email_field :email, placeholder: 'emailアドレスを入力(必須)' %>
     </div>
 
     <div class="field">
@@ -19,12 +19,12 @@
       <% if @validatable %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password" %>
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: 'パスワードを入力(必須)' %>
     </div>
 
     <div class="field">
       <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'もう一度パスワードを入力(必須)' %>
     </div>
 
     <div class="actions">
