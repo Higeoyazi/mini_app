@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_many :comments
 
   validates :name, presence: true, length: { maximum: 15 }
+  validates :avatar, presence: true
+  has_one_attached :avatar
 end

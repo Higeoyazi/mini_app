@@ -1,5 +1,9 @@
 <div class="message clearfix">
-  <%= image_tag 'Githubのキャラクター.png' %>
+  <% if current_user.avatar && current_user.id == tweet.user_id %>
+    <%= image_tag  current_user.avatar %>
+  <% else %>
+    <%= image_tag 'デフォルトの画像.png' %>
+  <% end %>
         <li>
           <%= link_to '詳細', "/tweets/#{tweet.id}", method: :get %>
         </li>

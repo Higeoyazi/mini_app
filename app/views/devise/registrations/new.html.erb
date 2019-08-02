@@ -26,6 +26,10 @@
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'もう一度パスワードを入力(必須)' %>
     </div>
+    
+    <div class="field">
+    <%= f.file_field :avatar %>
+    </div>
 
     <div class="actions">
       <%= f.submit "Sign up" %>
