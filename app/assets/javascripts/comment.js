@@ -35,9 +35,12 @@
           $('.btn').prop('disabled', false);
           })
         })
+        
+        // コンソールエラーになるため、コメントアウト
         // .fail(function(){
         //   alert('error');
         // })
+
         // 非同期通信後の処理の途中
       $(document).on("click",".delete_button",function(){
         $(this).parent().remove();
