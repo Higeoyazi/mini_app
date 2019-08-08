@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6, p, body {
   }
 
 header{
-  height: 80px;
+  height: 110px;
   background-color: white;
   /*border-bottom: 2px solid #bbb;*/
 }
@@ -44,11 +44,19 @@ h2{
   text-align: center;
 }
 
+h3{
+  float:left;
+}
+
 .contents{
   height: 100%;
   width: 600px;
   margin: 5px auto 0;
   background-color: white;
+}
+
+.devise-view-contents{
+  text-align: center;
 }
 
 form{
@@ -136,10 +144,24 @@ li{
   float:right;
 }
 
+.comments{
+  height: 456px;
+  overflow: scroll;
+}
+
 .comment{
   border: 1px solid #bbb;
 }
 
 .delete_edit_show_button{
+  float:right;
+}
+
+.ajax_delete_button{
+  float:right;
+  margin: 0px 15px;
+}
+
+.ajax_edit_button{
   float:right;
 }

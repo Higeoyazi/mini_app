@@ -2,10 +2,10 @@
   <div class="message clearfix">
     <% if current_user.avatar && current_user.id == @tweet.user_id %>
       <%= image_tag  current_user.avatar %>
-    <% elsif @tweet.user.avatar.record.id == @tweet.user_id %>
-      <%= image_tag  @tweet.user.avatar %>
-    <% else %>
+    <% elsif @tweet.user.avatar.attachment == nil %>
       <%= image_tag 'デフォルトの画像.png' %>
+    <% else @tweet.user.avatar.record.id == @tweet.user_id %>
+      <%= image_tag  @tweet.user.avatar %>
     <% end %>
         <% if user_signed_in? && current_user.id == @tweet.user_id %>
           <li>
@@ -31,24 +31,24 @@
       <% end %>
     <% end %>
 <!-- コメント一覧表示 -->
-    <div class="comments">   
       <h4>＜コメント一覧＞</h4>
-      <% if @comments %>
-        <% @comments.each do |comment| %>
-          <div class="comment">
-            <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
-            <%= comment.text %>
-            <% if user_signed_in? && current_user.id == comment.user_id %>
-            <li>
-              <%= link_to '編集', "/tweets/#{@tweet.id}/comments/#{comment.id}/edit", method: :get %>
-            </li>
-            <li>
-              <%= link_to '削除', "/tweets/#{@tweet.id}/comments/#{comment.id}", method: :delete %>
-            </li>
-          </div>
-            <% end %>
+      <div class="comments">
+        <% if @comments %>
+          <% @comments.each do |comment| %>
+            <div class="comment">
+              <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
+              <%= comment.text %>
+              <% if user_signed_in? && current_user.id == comment.user_id %>
+              <li>
+                <%= link_to '編集', "/tweets/#{@tweet.id}/comments/#{comment.id}/edit", method: :get %>
+              </li>
+              <li>
+                <%= link_to '削除', "/tweets/#{@tweet.id}/comments/#{comment.id}", method: :delete %>
+              </li>
+            </div>
+              <% end %>
+          <% end %>
         <% end %>
-      <% end %>
-    </div>
+      </div>
   </div>
 </div>
