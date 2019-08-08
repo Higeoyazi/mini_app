@@ -17,9 +17,11 @@
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
           <a class="post" href="/tweets/new">投稿する</a>
         </h2>
-        <span><%= current_user.name %>
-          <a href="/users/<%= current_user.id %>">マイページ</a>
-        </span>
+        <h3>
+          <span><%= current_user.name %>
+            <a href="/users/<%= current_user.id %>">マイページ</a>
+          </span>
+        </h3>
       <% else %>
         <h2>
           <%= link_to "ログイン", new_user_session_path, class: 'post' %>
