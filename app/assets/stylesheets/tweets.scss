@@ -145,7 +145,7 @@ li{
 }
 
 .comments{
-  height: 456px;
+  height: 380px;
   overflow: scroll;
 }
 
@@ -164,4 +164,16 @@ li{
 
 .ajax_edit_button{
   float:right;
+}
+
+.current__user__avatar{
+  height: 110px;
+  width: 100px;
+  margin: 46px 0px 15px 22px;
+  border-radius: 5px;
+}
+
+.return__button{
+  margin: 0px 20px 0px 0px;
+  float: right;
 }
