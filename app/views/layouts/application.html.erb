@@ -11,15 +11,21 @@
 
   <header>
     <div class="header__bar row">
-      <h1><a href="/">mini_app</a></h1>
+      <h1>mini_app</h1>
+        <span class="return__button"><%= link_to "一覧画面へ戻る","/", method: :get %></span>
       <% if user_signed_in? %>
         <h2>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
           <a class="post" href="/tweets/new">投稿する</a>
         </h2>
         <h3>
+          <div class="user__avatar clearfix">
+            <% if current_user %>
+              <%= image_tag  current_user.avatar ,class:"current__user__avatar"%>
+            <% end %>
+          </div>
           <span><%= current_user.name %>
-            <a href="/users/<%= current_user.id %>">マイページ</a>
+            <a href="/users/<%= current_user.id %>">マイページへ</a>
           </span>
         </h3>
       <% else %>

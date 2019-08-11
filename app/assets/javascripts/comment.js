@@ -46,7 +46,7 @@ $(function(){
         url: '/tweets/' + get_tweet_id + '/comments/' + get_comment_id,
         type: 'POST',
         data: {'id': get_comment_id,
-                '_method': 'DELETE'} 
+                '_method': 'DELETE'}
     })
   });
 });
