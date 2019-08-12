@@ -4,5 +4,8 @@ Rails.application.routes.draw do
   resources :tweets do
     resources :comments, only: [:create, :destroy, :edit, :update]
   end
+  namespace :api do
+    resources :tweets, only: :show, defaults: { format: 'json' }
+  end
   resources :users, only: [:show]
 end

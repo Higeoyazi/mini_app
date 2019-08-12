@@ -35,8 +35,10 @@
       <div class="comments">
         <% if @comments %>
           <% @comments.each do |comment| %>
-            <div class="comment">
-              <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
+            <div class="comment" id="comment" data-comment-id=<%="#{comment.id}"%> data-tweet-id=<%="#{@tweet.id}" %>>
+              <strong>
+                <%= link_to comment.user.name, "/users/#{comment.user_id}" %>
+              </strong>
               <%= comment.text %>
               <% if user_signed_in? && current_user.id == comment.user_id %>
               <li>
