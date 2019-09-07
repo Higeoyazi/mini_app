@@ -1,7 +1,11 @@
 <div class="contents">
-  <p><%= @name %>さんの投稿一覧</p>
-  <% @tweets.each do |tweet| %>  
-    <%= render partial: "tweets/tweet", locals: { tweet: tweet } %>
-  <% end %>
+  <p class="tweets-user-name"><%= @name %>さんの投稿一覧</p>
+<% if @tweets != [] %>
+  <%= render "shared/tweet" %>
   <%= paginate(@tweets) %>
+<% else %>
+  <div class="user-nothing-tweets">
+  <%= @name %>さんの投稿はありません。
+  </div>
+<% end %>
 </div>

@@ -113,7 +113,6 @@ form input{
 
 .button-box{
   float: right;
-  height: 70px;
 }
 
 .message{
@@ -163,6 +162,10 @@ form input{
 
 li{
   float:right;
+}
+
+.new_comment{
+  margin: 0px 40px;
 }
 
 .comments{
@@ -262,4 +265,25 @@ a{
 
 .post_button{
   margin: 20px;
+}
+
+// userのマイページにおいて、投稿がなかった時の表示のレイアウト
+.user-nothing-tweets{
+  font-size: 20px;
+  text-align: center;
+  margin: 70px 0px;
+}
+
+// userのマイページにおける文字サイズのレイアウト
+.tweets-user-name{
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+}
+
+// ページネーションのレイアウト
+.pagination{
+  font-size: 19px;
+  font-weight: 900;
+  text-align: center;
 }
