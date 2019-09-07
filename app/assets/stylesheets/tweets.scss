@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body, html {
   height: 100%;
-  background-color: #ddd;
+  background-image: url(https://create.peguneko.com/wp-content/uploads/img/fc2blog_201804102306322df.jpg);
+  // background-color: #ddd;
 }
 
 h1, h2, h3, h4, h5, h6, p, body {
@@ -26,15 +27,20 @@ h1, h2, h3, h4, h5, h6, p, body {
 
 header{
   height: 110px;
-  background-color: white;
-  /*border-bottom: 2px solid #bbb;*/
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNjKxOA_Etgt_cva70M7qHobAm2stPqnl7ycJxKI9WyA0fhy4j");
+  background-size: contain;
+  border-bottom: 2px solid #bbb;
 }
 
 h1{
   height: 46px;
   line-height: 46px;
-  font-size: 18px;
+  font-size: 30px;
   text-align: center;
+  width: 300px;
+  margin: 0 auto;
+  z-index: 1;
+  background-color: #ddd;
 }
 
 h2{
@@ -42,6 +48,10 @@ h2{
   line-height: 40px;
   font-size: 14px;
   text-align: center;
+  width: 300px;
+  margin: 0 auto;
+  z-index: 1;
+  background-color: #ddd;
 }
 
 h3{
@@ -59,11 +69,12 @@ h3{
   text-align: center;
 }
 
-form{
-  width: 600px;
-  background-color: white;
-  padding: 5px 0 0;
-}
+// formタグ全体のレイアウトが決められてしまうので、一時的にコメントアウトしています。
+// form{
+//   width: 600px;
+//   background-color: white;
+//   padding: 5px 0 0;
+// }
 
 .input-box{
   float: left;
@@ -75,12 +86,14 @@ form{
   margin: 0 0 10px 0;
 }
 
-form img{
+// 投稿・編集ページにおけるavatar画像の大きさ
+.new-edit_avatar{
   border: 1px solid #ccc;
   border-radius: 5px;
   float: left;
-  height: 24px;
-  margin: 0 5px 5px 34px;
+  height: 50px;
+  width: 50px;
+  margin: 0px 5px 5px 5px;
 }
 
 .submit-button{
@@ -105,11 +118,19 @@ form input{
 
 .message{
   min-height: 100px;
-  width: 598px;
+  width: 600px;
   margin: 0 auto;
   background-color: #fff;
   border: 1px solid #bbb;
-  border-bottom: none;
+  border-bottom: 2px solid #bbb;
+}
+
+// hoverした時に、浮き出るレイアウト
+.message:hover{
+  overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
+  transition-duration: 0.3s;	/*変化に掛かる時間*/
+  transform: scale(1.1);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
 }
 
 .message img{
@@ -145,12 +166,22 @@ li{
 }
 
 .comments{
-  height: 380px;
+  max-height: 380px;
   overflow: scroll;
 }
 
 .comment{
   border: 1px solid #bbb;
+  margin: 10px;
+  min-height: 40px;
+  max-height: 80px;
+}
+
+.comment:hover{
+  overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
+  transition-duration: 0.3s;	/*変化に掛かる時間*/
+  transform: scale(1.1);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
 }
 
 .delete_edit_show_button{
@@ -169,11 +200,66 @@ li{
 .current__user__avatar{
   height: 110px;
   width: 100px;
-  margin: 46px 0px 15px 22px;
+  margin: 30px 0px 15px 22px;
   border-radius: 5px;
+  border: 1px solid #bbb;
+}
+
+// hoverするとアバター画像が拡大する
+img:hover {
+  zoom: 3;
 }
 
 .return__button{
   margin: 0px 20px 0px 0px;
   float: right;
+  position: fixed;
+}
+// 以下、検索窓のcss
+.search-contents{
+  float: right;
+  width: 200px;
+  padding: 30px 0px;
+  margin: 0px 20px;
+}
+
+.search_form{
+  display: flex;
+}
+
+.search__query{
+  width: 200px;
+  height: 30px;
+}
+
+.btn-search{
+  height: 35px;
+  width: 35px;
+}
+
+.append-search-user{
+  width: 117px;
+  float: right;
+  padding: 30px 0px;
+  margin: 0px -20px;
+}
+
+// インクリメンタルサーチの結果表示のレイアウト
+.search_user{
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+.nothing-search-user{
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.post_button{
+  margin: 20px;
 }

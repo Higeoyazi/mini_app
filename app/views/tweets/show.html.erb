@@ -23,6 +23,7 @@
     </div>
   </div>
 <!-- コメント入力フォーム -->
+  <h4>＜コメントできます！！＞</h4>
   <div class="container">
     <% if current_user %>
       <%= form_for( [@tweet, @comment], id: "new_comment" ) do |f| %>
@@ -39,6 +40,7 @@
               <strong>
                 <%= link_to comment.user.name, "/users/#{comment.user_id}" %>
               </strong>
+                ：
               <%= comment.text %>
               <% if user_signed_in? && current_user.id == comment.user_id %>
               <li>

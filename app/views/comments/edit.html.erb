@@ -1,7 +1,7 @@
 <div class="contents">
   <h2>コメントを編集する</h2>
   <%= form_for( [@tweet, @comment], id: "new_comment" ) do |f| %>
-  <%= image_tag  current_user.avatar %>
+  <%= image_tag  current_user.avatar ,class:"new-edit_avatar"%>
     <%= f.text_area :text, placeholder: "text" %>
   <div class="button-box">
     <%= f.submit "送信"%>

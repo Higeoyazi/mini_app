@@ -2,9 +2,9 @@
   <h2>編集する</h2>
   <%= form_for (@tweet) ,:url => {:action => 'update'} do |f| %>
   <% if current_user.avatar && current_user.id == @tweet.user_id %>
-    <%= image_tag  current_user.avatar %>
+    <%= image_tag  current_user.avatar  ,class:"new-edit_avatar" %>
   <% else %>
-    <%= image_tag 'デフォルトの画像.png' %>
+    <%= image_tag 'デフォルトの画像.png' ,class:"new-edit_avatar" %>
   <% end %>  
     <%= f.text_area :text, placeholder: "text" %>
   <div class="button-box">
