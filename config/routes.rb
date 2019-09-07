@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :tweets, only: :show, defaults: { format: 'json' }
   end
-  resources :users, only: [:show] do
+  resources :users, only: [:show, :edit, :update] do
     collection do
       get 'search'
     end

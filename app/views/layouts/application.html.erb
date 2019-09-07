@@ -13,6 +13,7 @@
       <h1><%= link_to "mini_app","/", method: :get %></h1>
       <% if user_signed_in? %>
         <h2>
+          <%= link_to "アカウント編集",edit_user_path(current_user), method: :get ,class:"user_edit_button" %>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
           <a class="post_button" href="/tweets/new">投稿する</a>
           <%= link_to "一覧画面へ戻る","/", method: :get %>
