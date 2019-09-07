@@ -1,0 +1,9 @@
+<%= form_for (@tweet) do |f| %>
+<% if current_user.avatar %>
+  <%= image_tag  current_user.avatar ,class:"new-edit_avatar" %>
+<% else %>
+  <%= image_tag 'デフォルトの画像.png' ,class:"new-edit_avatar" %>
+<% end %>  
+  <%= f.text_area :text, placeholder: "text" %>
+  <%= f.submit "送信" ,class:"button-box" %>
+<% end %>
