@@ -1,9 +1,9 @@
 class TweetsController < ApplicationController
 
   # アバター持ってないとエラーになるから、authenticate_user!を使用します。
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
-  # before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @tweets = Tweet.includes(:user).page(params[:page]).per(6).order("created_at DESC")
@@ -45,7 +45,7 @@ private
     params.require(:tweet).permit(:text).merge(user_id: current_user.id)
   end
 
-  # def move_to_index
-  #   redirect_to action: :index unless user_signed_in?
-  # end
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
+  end
 end
