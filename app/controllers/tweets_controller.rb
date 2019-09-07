@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
 
-  # アバター持ってないとエラーになるから、authenticate_user!
+  # アバター持ってないとエラーになるから、authenticate_user!を使用します。
   before_action :authenticate_user!
 
   # before_action :move_to_index, except: [:index, :show]
@@ -14,7 +14,7 @@ class TweetsController < ApplicationController
   end
 
   def create
-    Tweet.create(text: tweet_params[:text], user_id: current_user.id)
+    Tweet.create(tweet_params)
     redirect_to controller: :tweets, action: :index
   end
 
@@ -40,9 +40,9 @@ class TweetsController < ApplicationController
     @comment = @tweet.comments.new
   end
 
-  private
+private
   def tweet_params
-    params.require(:tweet).permit(:text)
+    params.require(:tweet).permit(:text).merge(user_id: current_user.id)
   end
 
   # def move_to_index
