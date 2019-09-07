@@ -39,22 +39,24 @@ $(function(){
       $('.comments').append(html)
       $("#new_comment")[0].reset();
       $('.btn').prop('disabled', false);
-      $('.comments').animate({ scrollTop: $('.comments')[0].scrollHeight});
+      $('.comments').animate({ scrollTop: $('.comments')[0].scrollHeight}, 'fast');
       }
     })
   })
 });
 
 // 非同期でコメント削除
-$(document).on("click",".ajax_delete_button",function(){
-  var get_tweet_id = $(this).attr('data-tweet-id');
-  var get_comment_id = $(this).attr('data-comment-id');
-  $.ajax({
-    url: '/tweets/' + get_tweet_id + '/comments/' + get_comment_id,
-    type: 'POST',
-    data: {'id': get_comment_id,
-            '_method': 'DELETE'}
-  })
+$(function(){
+  $(document).on("click",".ajax_delete_button",function(){
+    var get_tweet_id = $(this).attr('data-tweet-id');
+    var get_comment_id = $(this).attr('data-comment-id');
+    $.ajax({
+      url: '/tweets/' + get_tweet_id + '/comments/' + get_comment_id,
+      type: 'POST',
+      data: {'id': get_comment_id,
+              '_method': 'DELETE'}
+    })
+  });
 });
 
 // コメントの自動更新
@@ -87,9 +89,9 @@ $(function(){
         });
         $('.comments').animate({scrollTop: $('.comments')[0].scrollHeight}, 'fast');
       })
-      .fail(function() {
-        alert('自動更新に失敗しました');
-      });
+      // .fail(function() {
+      //   alert('自動更新に失敗しました');
+      // });
     };
   };
   setInterval(reloadComments, 5000);

@@ -12,11 +12,11 @@
   <header>
     <div class="header__bar row">
       <h1>mini_app</h1>
-        <span class="return__button"><%= link_to "一覧画面へ戻る","/", method: :get %></span>
       <% if user_signed_in? %>
         <h2>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-          <a class="post" href="/tweets/new">投稿する</a>
+          <a class="post_button" href="/tweets/new">投稿する</a>
+          <%= link_to "一覧画面へ戻る","/", method: :get %>
         </h2>
         <h3>
           <div class="user__avatar clearfix">
@@ -34,6 +34,15 @@
           <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
         </h2>
       <% end %>
+<!-- 検索窓の設置 -->
+      <div class="search-contents">
+        <%= form_tag('/users/search', method: :get, class:'search_form') do %>
+          <input class="search__query" name="keyword" placeholder="ユーザー名で検索" type="text" value="">
+          <button class="btn-search" title="検索" type="submit" >検索</button>
+          </input>
+        <% end %>
+      </div>
+      <div class="append-search-user"></div>
     </div>
   </header>
 
