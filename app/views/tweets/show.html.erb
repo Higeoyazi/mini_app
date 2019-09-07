@@ -12,7 +12,7 @@
             <%= link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get %>
           </li>
           <li>
-            <%= link_to '削除', "/tweets/#{@tweet.id}", method: :delete %>
+            <%= link_to '削除', "/tweets/#{@tweet.id}", method: :delete, data: { confirm: '本当に削除してもよろしいでしょうか?' } %>
           </li>
         <% end %>
     <div class="message_box">
