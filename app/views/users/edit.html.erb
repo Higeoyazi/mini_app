@@ -1,0 +1,31 @@
+<div class="contents row">
+    <div class="devise-view-contents row">
+      <h2>Edit</h2>
+
+      <%= form_for(current_user) do |f| %>
+
+        <div class="field">
+          <%= f.label :name %> <em>(15 characters maximum)</em><br />
+          <%= f.text_field :name, autofocus: true, placeholder: 'ユーザー名を入力(必須)' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, placeholder: 'emailアドレスを入力(必須)' %>
+        </div>
+
+        <div class="field">
+        <%= f.file_field :avatar %>
+        </div>
+  
+        <div class="actions">
+            <%= f.submit "Update" %>
+        </div>
+      <% end %>
+
+      <h2>Destroy my account</h2>
+
+        <p>Unhappy? <%= button_to "Destroy my account", registration_path(current_user), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+    </div>
+  </div>

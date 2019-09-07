@@ -1,11 +1,11 @@
 <div class="contents">
   <div class="message clearfix">
     <% if current_user.avatar && current_user.id == @tweet.user_id %>
-      <%= image_tag  current_user.avatar %>
+      <%= image_tag  current_user.avatar ,class:"user_avatar"%>
     <% elsif @tweet.user.avatar.attachment == nil %>
-      <%= image_tag 'デフォルトの画像.png' %>
+      <%= image_tag 'デフォルトの画像.png' ,class:"user_avatar"%>
     <% else @tweet.user.avatar.record.id == @tweet.user_id %>
-      <%= image_tag  @tweet.user.avatar %>
+      <%= image_tag  @tweet.user.avatar ,class:"user_avatar"%>
     <% end %>
         <% if user_signed_in? && current_user.id == @tweet.user_id %>
           <li>
@@ -47,7 +47,7 @@
                 <%= link_to '編集', "/tweets/#{@tweet.id}/comments/#{comment.id}/edit", method: :get %>
               </li>
               <li>
-                <%= link_to '削除', "/tweets/#{@tweet.id}/comments/#{comment.id}", method: :delete %>
+                <%= link_to '削除', "/tweets/#{@tweet.id}/comments/#{comment.id}", method: :delete, data: { confirm: '本当に削除してもよろしいでしょうか?' } %>
               </li>
               <% end %>
             </div>
