@@ -30,6 +30,8 @@ header{
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNjKxOA_Etgt_cva70M7qHobAm2stPqnl7ycJxKI9WyA0fhy4j");
   background-size: contain;
   border-bottom: 2px solid #bbb;
+  width: 100%;
+  position: fixed;
 }
 
 h1{
@@ -63,6 +65,7 @@ h3{
   width: 600px;
   margin: 5px auto 0;
   background-color: white;
+  padding: 117px 0 0 0;
 }
 
 .devise-view-contents{

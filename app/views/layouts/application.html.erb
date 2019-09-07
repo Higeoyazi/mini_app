@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MiniApp</title>
+    <title>mini_app</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <header>
     <div class="header__bar row">
-      <h1>mini_app</h1>
+      <h1><%= link_to "mini_app","/", method: :get %></h1>
       <% if user_signed_in? %>
         <h2>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
