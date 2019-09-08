@@ -2,9 +2,8 @@
   * This app is a simple bulletin board app
 
 ## TopPage_image
-* Sign_out 
-<img src="https://i.gyazo.com/311f46d4f819b1f5e6f1ff70670297a0.png
-" width="500px" height="300px">
+* Sign_out
+![](https://i.gyazo.com/311f46d4f819b1f5e6f1ff70670297a0.png)
 
 * Sign_in
 ![](https://i.gyazo.com/c082fe926bcd029cf4aa322db4b3398d.png)
