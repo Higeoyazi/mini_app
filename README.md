@@ -1,25 +1,50 @@
 # mini_app
-  * This app is a simple bulletin board app
+  * mini_app is a simple bulletin board app
 
-## TopPage_image
-* Sign_out
+## TopPage
+* Before user registration
 ![](https://i.gyazo.com/311f46d4f819b1f5e6f1ff70670297a0.png)
 
-* Sign_in
+* After user registration
 ![](https://i.gyazo.com/c082fe926bcd029cf4aa322db4b3398d.png)
 
-![](https://gyazo.com/68a07d2f731060e87cfcd4bcebf8ca5b.png)
-
-https://gyazo.com/68a07d2f731060e87cfcd4bcebf8ca5b
-
 ## Overview
-  * Login (devise)
-  * User acaunt update
-  * User mypage 
-  * User mypage search(Incrimenatl search/jQuery)
-  * User model test(Rspec)
-  * Tweet create/index/show/update/delete
-  * Comment create(Ajax/jQuery)/read(index)/update/delete
-  * Comment Automatic Updating(Ajax/jQuery)
+  * SignUp(devise/ActiveStorage)
+  * SignIn(devise)
+  * SignOut(devise)
+  * User_acaunt_update(ActiveStorage)
+  * User_acaunt_delete
+  * User_mypage 
+  * User_mypage_search(IncrementalSearch/jQuery)
+  * User_model_test(Rspec)
+  * Tweet_create/index/show/update/delete
+  * Comment_create(Ajax/jQuery)/index/update/delete
+  * Comment_AutomaticUpdating(Ajax/jQuery)
   * Pagenation(kaminari)
 
+## Demo
+* SignUp(devise/ActiveStorage)
+
+    1.https://gyazo.com/b86fe2f70651a4f801135b8749d03973
+
+    2.https://gyazo.com/1000c215f1bbcb9de910f5ed909cc570
+
+* SignIn(devise)
+      
+    1.https://gyazo.com/442756a91a8e20cf9db6dd7250fdd227
+    
+    2.https://gyazo.com/6de74b00783064629bcb99ad1f286809
+    
+* User_acaunt_update(ActiveStorage)
+
+    1.https://gyazo.com/11adfe65d3038ec5cc60df3b38a229f7
+
+    2.https://gyazo.com/f574d83e2d572d0df6fcfc93060f74d4
+
+* User_mypage_search(IncrementalSearch/jQuery)
+
+  https://gyazo.com/130ec5a7a1243c2730828864c9ccfd3f
+
+* Comment_AutomaticUpdating(Ajax/jQuery)
+
+  https://gyazo.com/6acd85c48867bad52a6fe8ea41c4272f
