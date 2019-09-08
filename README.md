@@ -6,8 +6,9 @@
 ![](https://i.gyazo.com/311f46d4f819b1f5e6f1ff70670297a0.png)
 
 * Sign_in
-![サインイン後のトップページ](https://i.gyazo.com/c082fe926bcd029cf4aa322db4b3398d.png)
+![](https://i.gyazo.com/c082fe926bcd029cf4aa322db4b3398d.png)
 
+![](https://gyazo.com/68a07d2f731060e87cfcd4bcebf8ca5b)
 
 
 ## Overview
