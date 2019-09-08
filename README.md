@@ -45,6 +45,26 @@
 
   https://gyazo.com/130ec5a7a1243c2730828864c9ccfd3f
 
+* Tweet_create
+
+  https://gyazo.com/678b84fa25feccb2551518c17973493f
+
+* Tweet_update
+
+  https://gyazo.com/9c3bc284a38616b6d8d5a9b8422a1162
+
+* Tweet_delete
+
+  https://gyazo.com/a8c3695617c0479586ff26debe1bae5f
+
+* Comment_update
+
+  https://gyazo.com/a5a456cecdc46ba11aa8db7bc70c39c3
+
+* Comment_delete
+
+  https://gyazo.com/c74f34f532197931c32d4eff3f903fa1
+
 * Comment_AutomaticUpdating(Ajax/jQuery)
 
   https://gyazo.com/6acd85c48867bad52a6fe8ea41c4272f
