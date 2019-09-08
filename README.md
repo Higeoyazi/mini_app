@@ -68,3 +68,4 @@
 * Comment_AutomaticUpdating(Ajax/jQuery)
 
   https://gyazo.com/6acd85c48867bad52a6fe8ea41c4272f
+ 
