@@ -3,10 +3,12 @@
 
 ## TopPage
 * Before user registration
-![](https://i.gyazo.com/311f46d4f819b1f5e6f1ff70670297a0.png)
+![](https://i.gyazo.com/1220bf31e2f87ac3c56270b24c83bcdc.png)
+
 
 * After user registration
-![](https://i.gyazo.com/c082fe926bcd029cf4aa322db4b3398d.png)
+![](https://i.gyazo.com/f16b3d72357b4fda3c64d2d23eea43cf.png)
+
 
 ## Overview
   * SignUp(devise/ActiveStorage)
