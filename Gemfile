@@ -57,6 +57,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
   gem 'mini_magick'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -70,4 +71,8 @@ end
 
 group :test, :development do 
   gem 'capybara'
+end
+
+group :production do
+  gem 'pg'
 end
