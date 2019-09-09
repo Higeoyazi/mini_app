@@ -196,11 +196,12 @@ li{
 
 .ajax_delete_button{
   float:right;
-  color: blue;
+  color: red;
 }
 
 .ajax_edit_button{
   float:right;
+  color: green;
 }
 
 .current__user__avatar{
@@ -318,4 +319,39 @@ a{
 #user_avatar{
   background-color: rgb(252, 60, 60);
   margin: 30px 0px;
+}
+
+// 詳細・編集・削除ボタンの色
+.show_button{
+  color: blue;
+}
+
+.edit_button{
+  color: green;
+}
+
+.delete_button{
+  color: red;
+}
+
+// 時間表示の位置
+.time{
+  float: right;
+}
+
+// フォームボタンのレイアウト
+.button-box{
+  background-color: orange;
+  border-radius: 5px;
+}
+
+.btn{
+  background-color: orange;
+  border-radius: 5px;
+}
+
+// 新規登録画面・ログイン画面・編集画面のボタンのレイアウト
+.user_button{
+  background-color: orange;
+  border-radius: 5px;
 }
