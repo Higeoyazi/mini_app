@@ -78,6 +78,7 @@ group :production do
 end
 
 group :development, :production, :test do
+  gem 'kaminari'
   gem 'devise'
   gem 'jquery-rails'
 end
