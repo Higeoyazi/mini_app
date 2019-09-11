@@ -1,6 +1,9 @@
 # mini_app
   * mini_app is a simple bulletin board app
 
+## URL
+  * https://enigmatic-reaches-21915.herokuapp.com
+  
 ## TopPage
 * Before user registration
 ![](https://i.gyazo.com/1220bf31e2f87ac3c56270b24c83bcdc.png)
@@ -71,3 +74,5 @@
 
   https://gyazo.com/6acd85c48867bad52a6fe8ea41c4272f
  
+## Deployment
+* heroku/7.26.2
