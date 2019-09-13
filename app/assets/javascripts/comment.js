@@ -89,7 +89,7 @@ $(function(){
           insertHTML = buildHTML(comment);
           $('.comments').append(insertHTML);
         });
-        $('.comments').animate({scrollTop: $('.comments')[0].scrollHeight}, 'fast');
+        $('.comments').animate({scrollTop: $('.comments')[0].scrollHeight}, 500, 'swing');
       })
       // .fail(function() {
       //   alert('自動更新に失敗しました');
