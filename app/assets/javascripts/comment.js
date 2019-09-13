@@ -98,3 +98,12 @@ $(function(){
   };
   setInterval(reloadComments, 5000);
 });
+
+// コメントにマウスカーソルを合わせた時にスタイルが変更する
+$(function(){
+  $(".comments").on("mouseover", ".comment", function(){
+    $(this).css({"background-color": "#F1940B", "font-weight": "bold"});
+  }).on("mouseout", ".comment", function(){
+    $(this).css({"background-color": "#FFFFFF", "font-weight": "normal"});
+  })
+});
