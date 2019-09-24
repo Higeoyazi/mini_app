@@ -10,7 +10,7 @@
 
   <header>
     <div class="header__bar row">
-      <h1><%= link_to "mini_app","/", method: :get %></h1>
+      <h1><%= link_to "miniちゃんねる","/", method: :get %></h1>
       <% if user_signed_in? %>
         <h2>
           <%= link_to "アカウント編集",edit_user_path(current_user), method: :get ,class:"user_edit_button" %>
