@@ -72,13 +72,6 @@ h3{
   text-align: center;
 }
 
-// formタグ全体のレイアウトが決められてしまうので、一時的にコメントアウトしています。
-// form{
-//   width: 600px;
-//   background-color: white;
-//   padding: 5px 0 0;
-// }
-
 .input-box{
   float: left;
   width: 500px;
@@ -145,7 +138,7 @@ form input{
 
 .message_box{
   float: left;
-  height: 100px;
+  min-height: 100px;
   width: 505px;
   padding: 9px 0 10px;
 }
