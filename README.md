@@ -1,9 +1,15 @@
 # mini_app
   * mini_app is a simple bulletin board app
 
+
 ## URL
   * https://enigmatic-reaches-21915.herokuapp.com
   
+ 
+## YouTube
+  * https://www.youtube.com/watch?v=0VoO512sQ1g&feature=youtu.be
+
+
 ## TopPage
 * Before user registration
 ![](https://i.gyazo.com/1220bf31e2f87ac3c56270b24c83bcdc.png)
@@ -26,6 +32,7 @@
   * Comment_create(Ajax/jQuery)/index/update/delete
   * Comment_AutomaticUpdating(Ajax/jQuery)
   * Pagenation(kaminari)
+  
 
 ## Demo
 * SignUp(devise/ActiveStorage)
